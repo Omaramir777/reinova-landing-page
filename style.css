@@ -76,6 +76,17 @@ body{
 .trust-row span{position:relative;padding-right:16px}
 .trust-row span:before{content:"";position:absolute;right:0;top:6px;width:6px;height:6px;border-radius:50%;background:var(--gold)}
 
+/* Manual APK install steps (Android sideload walkthrough) */
+.install-steps{margin-top:26px;padding:20px;background:var(--surface);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow)}
+.install-title{font:800 14px Manrope;color:var(--ink);margin-bottom:16px}
+.install-grid{list-style:none;display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.install-grid li{display:flex;flex-direction:column;gap:8px}
+.install-grid img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:10px;border:1px solid var(--line);background:var(--surface-2)}
+.install-grid div{display:flex;align-items:flex-start;gap:8px}
+.install-grid span{flex-shrink:0;width:20px;height:20px;border-radius:50%;background:var(--accent);color:var(--accent-ink);font:800 11px Manrope;display:grid;place-items:center}
+.install-grid p{font-size:12.5px;color:var(--muted);line-height:1.65;margin:0}
+@media (max-width:640px){.install-grid{grid-template-columns:1fr}}
+
 /* Hero visual: app mock */
 .hero-visual{position:relative;min-height:440px;display:grid;place-items:center}
 .glow{position:absolute;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle,rgba(15,76,70,.10),transparent 70%);filter:blur(10px)}
