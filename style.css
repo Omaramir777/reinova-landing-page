@@ -286,7 +286,7 @@ footer p{font-size:10px;color:var(--muted)}
 .reveal-5{animation-delay:.5s}
 .reveal-6{animation-delay:.35s}
 
-.reveal-on-scroll{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease}
+.reveal-on-scroll{opacity:0;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease}
 .reveal-on-scroll.in-view{opacity:1;transform:translateY(0)}
 
 @media(prefers-reduced-motion:reduce){
