@@ -14,7 +14,7 @@ const io = new IntersectionObserver((entries) => {
       entry.target.classList.add('in-view');
     }
   });
-}, {
+});
   rootMargin: '0px 0px 120px 0px'
 });
   }, { threshold: 0.15 });
