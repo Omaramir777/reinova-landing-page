@@ -62,66 +62,20 @@ body{
 /* Hero */
 .hero{
   max-width:var(--max);margin:auto;padding:70px 22px 100px;
-  display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center;
+  display:grid;grid-template-columns:1fr;justify-items:center;text-align:center;
 }
+.hero-copy{max-width:720px}
 .hero h1{
   font-size:clamp(38px,5.2vw,58px);line-height:1.22;letter-spacing:-1px;margin:20px 0 18px;color:var(--ink);
 }
-.hero-text{max-width:540px;color:var(--muted);font-size:16px}
-.actions{display:flex;gap:12px;margin:28px 0}
+.hero-text{max-width:540px;color:var(--muted);font-size:16px;margin-left:auto;margin-right:auto}
+.actions{display:flex;gap:12px;margin:28px 0;justify-content:center}
 .primary{display:flex;align-items:center;gap:18px}
 .secondary{border:1px solid var(--line);color:var(--ink);text-decoration:none;border-radius:12px;padding:10px 17px;transition:.2s;background:var(--surface)}
 .secondary:hover{border-color:var(--accent);color:var(--accent)}
-.trust-row{display:flex;gap:18px;flex-wrap:wrap;color:var(--muted);font-size:12px}
+.trust-row{display:flex;gap:18px;flex-wrap:wrap;color:var(--muted);font-size:12px;justify-content:center}
 .trust-row span{position:relative;padding-right:16px}
 .trust-row span:before{content:"";position:absolute;right:0;top:6px;width:6px;height:6px;border-radius:50%;background:var(--gold)}
-
-/* Manual APK install steps (Android sideload walkthrough) */
-.install-steps{margin-top:26px;padding:20px;background:var(--surface);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow)}
-.install-title{font:800 14px Manrope;color:var(--ink);margin-bottom:16px}
-.install-grid{list-style:none;display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
-.install-grid li{display:flex;flex-direction:column;gap:8px}
-.install-grid img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:10px;border:1px solid var(--line);background:var(--surface-2)}
-.install-grid div{display:flex;align-items:flex-start;gap:8px}
-.install-grid span{flex-shrink:0;width:20px;height:20px;border-radius:50%;background:var(--accent);color:var(--accent-ink);font:800 11px Manrope;display:grid;place-items:center}
-.install-grid p{font-size:12.5px;color:var(--muted);line-height:1.65;margin:0}
-@media (max-width:640px){.install-grid{grid-template-columns:1fr}}
-
-/* Hero visual: app mock */
-.hero-visual{position:relative;min-height:440px;display:grid;place-items:center}
-.glow{position:absolute;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle,rgba(15,76,70,.10),transparent 70%);filter:blur(10px)}
-.app-mock{
-  position:relative;width:min(380px,92%);background:var(--surface);border:1px solid var(--line);
-  border-radius:28px;box-shadow:var(--shadow);padding:26px;z-index:1;
-}
-.app-top{display:flex;align-items:center;gap:6px;margin-bottom:22px}
-.app-top .dot{width:7px;height:7px;border-radius:50%;background:var(--line)}
-.app-top b{margin-right:auto;font:800 12px Manrope;color:var(--ink);letter-spacing:.3px}
-.app-steps{display:flex;flex-direction:column;gap:10px}
-.app-step{
-  display:flex;align-items:center;gap:13px;padding:13px 14px;border-radius:14px;
-  border:1px solid var(--line);background:var(--bg);transition:.25s;
-}
-.app-step.active{background:var(--accent);border-color:var(--accent)}
-.app-step.active b,.app-step.active small{color:var(--accent-ink)}
-.app-step.active small{opacity:.75}
-.app-step .n{
-  flex:0 0 26px;height:26px;border-radius:50%;display:grid;place-items:center;
-  background:var(--surface);color:var(--accent);font:800 12px Manrope;
-}
-.app-step.active .n{background:rgba(255,255,255,.18);color:var(--accent-ink)}
-.app-step b{display:block;font-size:13px}
-.app-step small{display:block;color:var(--muted);font-size:11px;margin-top:2px}
-.app-cta{
-  display:block;text-align:center;margin-top:18px;background:var(--gold);color:#fff;
-  text-decoration:none;font-weight:800;font-size:13px;padding:12px;border-radius:12px;
-}
-.float-badge{
-  position:absolute;bottom:-14px;left:6%;display:flex;align-items:center;gap:9px;
-  background:var(--surface);border:1px solid var(--line);box-shadow:var(--shadow);
-  padding:11px 16px;border-radius:99px;font-size:11px;color:var(--ink);z-index:2;
-}
-.pulse{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 rgba(15,76,70,.5);animation:pulse 2.2s infinite}
 
 /* Sections */
 .section{max-width:var(--max);margin:auto;padding:90px 22px}
@@ -130,14 +84,18 @@ body{
 .section-head p{color:var(--muted);font-size:14px;margin:0}
 .center{margin-left:auto;margin-right:auto;text-align:center;max-width:560px}
 
-.intro-layout{display:grid;grid-template-columns:1.5fr .8fr;gap:26px;align-items:stretch}
+.intro-layout{max-width:760px;margin:0 auto}
 .big-copy{font-size:22px;line-height:1.85;color:var(--ink);margin:0}
-.manifesto{
-  border:1px solid var(--line);border-radius:22px;padding:30px;background:var(--surface);
-  display:flex;flex-direction:column;justify-content:space-between;box-shadow:var(--shadow);
-}
-.manifesto span{font:800 10px Manrope;letter-spacing:3px;color:var(--gold)}
-.manifesto strong{font:800 24px/1.3 Cairo;color:var(--ink)}
+
+/* Manual APK install steps (Android sideload walkthrough) */
+.install-grid{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.install-grid li{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:14px;display:flex;flex-direction:column;gap:10px;box-shadow:var(--shadow)}
+.install-grid img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:10px;border:1px solid var(--line);background:var(--surface-2)}
+.install-grid div{display:flex;align-items:flex-start;gap:8px}
+.install-grid span{flex-shrink:0;width:22px;height:22px;border-radius:50%;background:var(--accent);color:var(--accent-ink);font:800 11px Manrope;display:grid;place-items:center}
+.install-grid p{font-size:13px;color:var(--muted);line-height:1.6;margin:0}
+@media (max-width:900px){.install-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:520px){.install-grid{grid-template-columns:1fr}}
 
 .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 .benefit{
@@ -303,19 +261,16 @@ footer p{font-size:10px;color:var(--muted)}
 .reveal-on-scroll.in-view{opacity:1;transform:translateY(0)}
 
 @media(prefers-reduced-motion:reduce){
-  .hero-copy [class^="reveal-"],.hero-visual.reveal-6,.reveal-on-scroll{animation:none!important;transition:none!important;opacity:1!important;transform:none!important}
-  .pulse{animation:none}
+  .hero-copy [class^="reveal-"],.reveal-on-scroll{animation:none!important;transition:none!important;opacity:1!important;transform:none!important}
 }
 
 @media(max-width:900px){
   .nav nav{display:none}
-  .hero{grid-template-columns:1fr;padding-top:45px}
-  .hero-visual{min-height:400px;margin-top:10px}
+  .hero{padding-top:45px}
   .cards{grid-template-columns:1fr 1fr}
   .wash-cards,.plan-cards{grid-template-columns:1fr 1fr}
   .register-grid{grid-template-columns:1fr 1fr}
   .register-grid.steps-5{grid-template-columns:repeat(3,1fr)}
-  .intro-layout{grid-template-columns:1fr}
   .download{margin:20px 15px 70px;flex-direction:column;text-align:center}
   .section{padding:70px 20px}
 }
