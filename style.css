@@ -287,16 +287,15 @@ footer p{font-size:10px;color:var(--muted)}
 .reveal-6{animation-delay:.35s}
 
 .reveal-on-scroll{
-  opacity:0;
-  transform:translateY(8px);
-  transition:opacity .25s ease,transform .25s ease
+  opacity:1;
+  transform:translateY(0);
+  transition:opacity .25s ease, transform .25s ease;
 }
 
 .reveal-on-scroll.in-view{
   opacity:1;
-  transform:translateY(0)
+  transform:translateY(0);
 }
-
 @media(prefers-reduced-motion:reduce){
   .hero-copy [class^="reveal-"],.reveal-on-scroll{animation:none!important;transition:none!important;opacity:1!important;transform:none!important}
 }
