@@ -8,13 +8,15 @@ document.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click
 // Reveal sections on scroll
 const revealEls = document.querySelectorAll('.reveal-on-scroll');
 if ('IntersectionObserver' in window && revealEls.length) {
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('in-view');
-        io.unobserve(entry.target);
-      }
-    });
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('in-view');
+    }
+  });
+}, {
+  rootMargin: '0px 0px 120px 0px'
+});
   }, { threshold: 0.15 });
   revealEls.forEach(el => io.observe(el));
 } else {
