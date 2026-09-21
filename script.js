@@ -15,17 +15,6 @@ tabs.forEach(tab => tab.addEventListener('click', () => {
   panels.forEach(p => p.classList.toggle('active', p.dataset.panel === target));
 }));
 
-// Hero app-mock: cycle the highlighted step to preview the flow
-const appSteps = document.querySelectorAll('.app-step');
-if (appSteps.length && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-  let current = 0;
-  setInterval(() => {
-    appSteps[current].classList.remove('active');
-    current = (current + 1) % appSteps.length;
-    appSteps[current].classList.add('active');
-  }, 2400);
-}
-
 // Reveal sections on scroll
 const revealEls = document.querySelectorAll('.reveal-on-scroll');
 if ('IntersectionObserver' in window && revealEls.length) {
