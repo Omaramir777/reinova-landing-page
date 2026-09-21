@@ -4,16 +4,6 @@ document.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click
   if (el) { e.preventDefault(); el.scrollIntoView({ behavior: 'smooth' }); }
 }));
 
-// Booking tabs: wash/packages vs subscription
-const tabs = document.querySelectorAll('.tab');
-const panels = document.querySelectorAll('.process-panel');
-tabs.forEach(tab => tab.addEventListener('click', () => {
-  tabs.forEach(t => { t.classList.remove('active'); t.setAttribute('aria-selected', 'false'); });
-  tab.classList.add('active');
-  tab.setAttribute('aria-selected', 'true');
-  const target = tab.dataset.tab;
-  panels.forEach(p => p.classList.toggle('active', p.dataset.panel === target));
-}));
 
 // Reveal sections on scroll
 const revealEls = document.querySelectorAll('.reveal-on-scroll');
