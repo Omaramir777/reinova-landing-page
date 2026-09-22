@@ -79,6 +79,21 @@ body{
 @media (prefers-reduced-motion: reduce){
   .nav-btn::after{animation:none;display:none;}
 }
+.nav-btn{position:relative;overflow:hidden;}
+.nav-btn::after{
+  content:'';position:absolute;top:0;left:-60%;width:45%;height:100%;
+  background:linear-gradient(115deg,transparent,rgba(255,255,255,.75),transparent);
+  transform:skewX(-20deg);
+  animation:btn-shine 2.8s ease-in-out infinite;
+}
+@keyframes btn-shine{
+  0%{left:-60%;}
+  35%{left:130%;}
+  100%{left:130%;}
+}
+@media (prefers-reduced-motion: reduce){
+  .nav-btn::after{animation:none;display:none;}
+}
 .nav-btn:hover,.primary:hover{transform:translateY(-2px);box-shadow:0 16px 30px rgba(18,59,109,.24)}
 
 /* Hero */
