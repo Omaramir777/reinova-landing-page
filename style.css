@@ -345,8 +345,8 @@ footer p{font-size:10px;color:var(--muted)}
 }
 /* Water-drip scroll effect — lightweight, plays once per section, GPU-only transforms */
 .water-drip{
-  position:absolute;top:0;left:50%;transform:translateX(-50%);
-  display:flex;gap:16px;pointer-events:none;z-index:1;
+  display:flex;justify-content:center;gap:16px;pointer-events:none;
+  margin-bottom:10px;height:20px;
 }
 .water-drip span{
   width:6px;height:6px;border-radius:50% 50% 50% 0;
