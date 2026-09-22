@@ -368,7 +368,14 @@ footer p{font-size:10px;color:var(--muted)}
 @media (prefers-reduced-motion: reduce){
   .water-drip span{animation:none !important;opacity:0 !important;}
 }
-
+#backToTop{
+  position:fixed;bottom:24px;left:24px;width:46px;height:46px;
+  border-radius:50%;border:none;background:var(--accent);color:var(--accent-ink);
+  font-size:20px;font-weight:800;cursor:pointer;box-shadow:0 12px 24px rgba(18,59,109,.24);
+  opacity:0;visibility:hidden;transform:translateY(10px);
+  transition:opacity .25s,transform .25s,visibility .25s;z-index:40;
+}
+#backToTop.show{opacity:1;visibility:visible;transform:translateY(0)}
 
 
 
