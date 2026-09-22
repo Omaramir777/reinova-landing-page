@@ -27,3 +27,18 @@ if ('IntersectionObserver' in window && revealEls.length) {
 } else {
   revealEls.forEach(el => el.classList.add('in-view'));
 }
+// Back-to-top button
+const backToTop = document.getElementById('backToTop');
+if (backToTop) {
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      requestAnimationFrame(() => {
+        backToTop.classList.toggle('show', window.scrollY > 700);
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+  backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+}
