@@ -45,7 +45,7 @@ body{
   border-bottom:1px solid var(--line);
 }
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);direction:ltr}
-.logo-img{width:88px;height:54px;object-fit:contain;object-position:center}
+.logo-img{width:112px;height:68px;object-fit:contain;object-position:center}
 .brand-names{display:block;line-height:1.05}
 .brand-names strong{font:800 16px Manrope;letter-spacing:1px}
 .brand-names small{display:block;color:var(--muted);font-size:9px;margin-top:5px}
@@ -307,7 +307,13 @@ footer p{font-size:10px;color:var(--muted)}
 }
 
 @media(max-width:900px){
-  .nav nav{display:none}
+  .nav{flex-wrap:wrap;height:auto;padding:12px;row-gap:10px}
+  .nav nav{
+    display:flex;order:3;width:100%;overflow-x:auto;gap:18px;
+    -webkit-overflow-scrolling:touch;padding-bottom:2px;
+  }
+  .nav nav::-webkit-scrollbar{display:none}
+  .nav nav a{white-space:nowrap;font-size:12px;}
   .hero{padding-top:45px}
   .cards{grid-template-columns:1fr 1fr}
   .wash-cards,.plan-cards{grid-template-columns:1fr 1fr}
@@ -318,7 +324,7 @@ footer p{font-size:10px;color:var(--muted)}
 }
 @media(max-width:560px){
   .nav{height:70px;padding:0 12px}
-  .logo-img{width:70px}
+  .logo-img{width:86px;height:52px}
   .brand-names{display:none}
   .nav-btn{font-size:10px;padding:9px 12px}
   .hero{padding:40px 18px 70px}
