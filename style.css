@@ -444,7 +444,274 @@ footer p{font-size:10px;color:var(--muted)}
   transition:opacity .25s,transform .25s,visibility .25s;z-index:40;
 }
 #backToTop.show{opacity:1;visibility:visible;transform:translateY(0)}
+/* =========================================
+   WASH COMPARISON
+========================================= */
 
+.wash-comparison{
+  padding-top:55px;
+}
+
+.wash-comparison-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:18px;
+  margin-top:30px;
+}
+
+.wash-compare-card{
+  overflow:hidden;
+  background:var(--surface);
+  border:1px solid var(--line);
+  border-radius:22px;
+  box-shadow:var(--shadow);
+}
+
+.wash-compare-card.traditional{
+  border-top:4px solid #1769AA;
+}
+
+.wash-compare-card.semi-dry{
+  border-top:4px solid #0D9B6C;
+}
+
+.wash-compare-header{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  padding:24px;
+  color:#fff;
+}
+
+.traditional .wash-compare-header{
+  background:#1769AA;
+}
+
+.semi-dry .wash-compare-header{
+  background:#0D9B6C;
+}
+
+.wash-compare-icon{
+  width:48px;
+  height:48px;
+  flex:0 0 48px;
+  display:grid;
+  place-items:center;
+  border-radius:14px;
+  background:rgba(255,255,255,.16);
+  font-size:23px;
+}
+
+.wash-compare-header h3{
+  margin:0;
+  font-size:22px;
+  line-height:1.3;
+}
+
+.wash-compare-header span{
+  display:block;
+  margin-top:4px;
+  font-size:12px;
+  opacity:.9;
+}
+
+.wash-compare-row{
+  display:flex;
+  align-items:flex-start;
+  gap:13px;
+  padding:18px 22px;
+  border-bottom:1px solid var(--line);
+}
+
+.wash-compare-row:last-child{
+  border-bottom:0;
+}
+
+.wash-row-icon{
+  width:38px;
+  height:38px;
+  flex:0 0 38px;
+  display:grid;
+  place-items:center;
+  border-radius:11px;
+  background:var(--surface-2);
+  font-size:17px;
+}
+
+.wash-compare-row strong{
+  display:block;
+  margin-bottom:3px;
+  color:var(--ink);
+  font-size:14px;
+}
+
+.wash-compare-row p{
+  margin:0;
+  color:var(--muted);
+  font-size:12px;
+  line-height:1.7;
+}
+
+
+/* Process */
+
+.wash-process-title{
+  text-align:center;
+  margin:58px auto 25px;
+}
+
+.wash-process-title h3{
+  margin:0;
+  font-size:28px;
+  color:var(--ink);
+}
+
+.wash-process-title p{
+  margin:6px 0 0;
+  color:var(--muted);
+  font-size:13px;
+}
+
+.wash-process-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:18px;
+}
+
+.wash-process-card{
+  padding:24px;
+  border:1px solid var(--line);
+  border-radius:22px;
+  background:var(--surface);
+}
+
+.wash-process-card h4{
+  margin:0 0 20px;
+  padding-bottom:14px;
+  border-bottom:1px solid var(--line);
+  color:var(--ink);
+  font-size:19px;
+}
+
+.wash-process-card.semi-dry-process{
+  border-top:4px solid #0D9B6C;
+}
+
+.wash-process-step{
+  display:grid;
+  grid-template-columns:32px 52px 1fr;
+  align-items:center;
+  gap:11px;
+  min-height:68px;
+}
+
+.wash-process-step > span{
+  width:30px;
+  height:30px;
+  display:grid;
+  place-items:center;
+  border-radius:50%;
+  background:var(--accent);
+  color:var(--accent-ink);
+  font:800 11px Manrope;
+}
+
+.semi-dry-process .wash-process-step > span{
+  background:#0D9B6C;
+}
+
+.process-image-placeholder{
+  width:52px;
+  height:52px;
+  display:grid;
+  place-items:center;
+  border-radius:13px;
+  background:var(--surface-2);
+  border:1px solid var(--line);
+  font-size:22px;
+}
+
+.wash-process-step strong{
+  display:block;
+  color:var(--ink);
+  font-size:13px;
+}
+
+.wash-process-step small{
+  display:block;
+  margin-top:2px;
+  color:var(--muted);
+  font-size:11px;
+  line-height:1.5;
+}
+
+
+/* Note */
+
+.wash-note{
+  margin-top:18px;
+  padding:18px 20px;
+  border-radius:16px;
+  background:var(--surface-2);
+  color:var(--muted);
+  font-size:12px;
+  line-height:1.8;
+  border:1px solid var(--line);
+}
+
+.wash-note strong{
+  color:var(--ink);
+}
+
+
+/* Mobile */
+
+@media(max-width:900px){
+  .wash-comparison-grid,
+  .wash-process-grid{
+    grid-template-columns:1fr;
+  }
+}
+
+@media(max-width:560px){
+  .wash-comparison{
+    padding-top:40px;
+  }
+
+  .wash-compare-header{
+    padding:20px;
+  }
+
+  .wash-compare-header h3{
+    font-size:19px;
+  }
+
+  .wash-compare-row{
+    padding:16px 18px;
+  }
+
+  .wash-process-card{
+    padding:20px;
+  }
+
+  .wash-process-title{
+    margin-top:45px;
+  }
+
+  .wash-process-title h3{
+    font-size:24px;
+  }
+
+  .wash-process-step{
+    grid-template-columns:30px 48px 1fr;
+    gap:9px;
+  }
+
+  .process-image-placeholder{
+    width:48px;
+    height:48px;
+  }
+}
 
 
 
