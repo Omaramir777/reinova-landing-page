@@ -115,7 +115,7 @@ body{
 
 /* Hero */
 .hero{
-  max-width:var(--max);margin:auto;padding:50px 22px 46px;
+  max-width:var(--max);margin:auto;padding:50px 22px 26px;
   display:grid;grid-template-columns:1fr;justify-items:center;text-align:center;
 }
 .hero-copy{max-width:720px}
@@ -132,7 +132,7 @@ body{
 .trust-row span:before{content:"";position:absolute;right:0;top:6px;width:6px;height:6px;border-radius:50%;background:var(--gold)}
 
 /* Sections */
-.section{max-width:var(--max);margin:auto;padding:36px 22px}
+.section{max-width:var(--max);margin:auto;padding:20px 22px}
 .section-head{margin-bottom:18px;max-width:640px}
 .section-head h2{font-size:clamp(28px,3.4vw,38px);line-height:1.3;margin:0 0 10px;letter-spacing:-.5px}
 .section-head p{color:var(--muted);font-size:14px;margin:0}
@@ -280,7 +280,7 @@ body{
 
 /* Download */
 .download{
-  max-width:var(--max);margin:20px auto 46px;padding:40px;border-radius:28px;
+  max-width:var(--max);margin:14px auto 26px;padding:40px;border-radius:28px;
   background:var(--accent);color:var(--accent-ink);
   display:flex;justify-content:space-between;align-items:center;gap:30px;
 }
@@ -369,8 +369,8 @@ footer p{font-size:10px;color:var(--muted)}
   .wash-cards,.plan-cards{grid-template-columns:1fr 1fr}
   .register-grid{grid-template-columns:1fr 1fr}
   .register-grid.steps-5{grid-template-columns:repeat(3,1fr)}
-  .download{margin:20px 15px 36px;flex-direction:column;text-align:center}
-  .section{padding:32px 20px}
+  .download{margin:14px 15px 22px;flex-direction:column;text-align:center}
+  .section{padding:18px 20px}
 }
 @media(max-width:560px){
   .nav{height:70px;padding:0 12px}
@@ -449,8 +449,8 @@ footer p{font-size:10px;color:var(--muted)}
 ========================= */
 
 .wash-comparison{
-  padding-top:42px;
-  padding-bottom:42px;
+  padding-top:20px;
+  padding-bottom:20px;
 }
 
 .wash-compare-grid{
@@ -719,8 +719,8 @@ footer p{font-size:10px;color:var(--muted)}
 
 @media(max-width:560px){
   .wash-comparison{
-    padding-top:30px;
-    padding-bottom:30px;
+    padding-top:18px;
+    padding-bottom:18px;
   }
 
   .wash-compare-grid{
