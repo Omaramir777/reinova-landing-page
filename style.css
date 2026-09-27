@@ -371,7 +371,7 @@ footer p{font-size:10px;color:var(--muted)}
   .section{padding:18px 20px}
 }
 @media(max-width:560px){
-  .nav{height:70px;padding:0 12px}
+  .nav{padding:10px 12px 8px}
   .logo-img{width:86px;height:52px}
   .brand-names{display:none}
   .nav-btn{font-size:10px;padding:9px 12px}
