@@ -485,19 +485,27 @@ footer p{font-size:10px;color:var(--muted)}
 .wash-compare-badge{
   display:inline-flex;
   align-items:center;
-  padding:6px 10px;
+  gap:6px;
+  padding:8px 14px;
   border-radius:999px;
   background:var(--surface-2);
   color:var(--muted);
-  font-size:11px;
+  font-size:14px;
   font-weight:800;
 }
+
+.badge-icon{
+  width:18px;height:18px;flex-shrink:0;
+  fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;
+}
+
+.wash-compare-badge.not-recommended .badge-icon{stroke:#DC2626}
+.wash-compare-badge.recommended .badge-icon{stroke:#16A34A}
 
 .wash-compare-card.semi-dry .wash-compare-badge{
   background:var(--accent);
   color:var(--accent-ink);
 }
-
 .wash-compare-row{
   display:grid;
   grid-template-columns:40% 60%;
